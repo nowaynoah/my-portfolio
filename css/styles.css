@@ -224,6 +224,14 @@ a:hover {
 
 .project-details p {
     margin: 0;
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: #161616;
+    font-family: inherit;
+}
+
+.project-details.active {
+    display: block;
 }
 
 /*Contact Form Styling*/
