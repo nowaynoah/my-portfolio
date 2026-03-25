@@ -147,6 +147,12 @@ a:hover {
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
+.timeline-btn.active {
+    background-color: #9a3412;
+    color: #f6f1e8;
+    transform: translateX(4px);
+}
+
 .timeline-btn:hover {
     background-color: #9a3412;
     color: #f6f1e8;
@@ -208,6 +214,12 @@ a:hover {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+}
+
+.project-toggle-btn.active {
+    background-color: #9a3412;
+    color: #f6f1e8;
+    border-color: #9a3412;
 }
 
 .project-toggle-btn:hover {
@@ -420,4 +432,33 @@ body.build-mode section:first-of-type {
 
 body.build-mode #formError {
     color: #ff9f6e;
+}
+
+/*Scroll Indicator Styling*/
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    font-size: 2rem;
+    color: #161616;
+    animation: bounce 1.5s infinite;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hero {
+    position: relative;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+.scroll-indicator.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
 }
