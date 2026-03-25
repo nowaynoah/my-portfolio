@@ -436,6 +436,32 @@ body.build-mode #formError {
     color: #ff9f6e;
 }
 
+body.build-mode .repo-card {
+    background-color: #222222;
+    border: 1px solid #3a3a3a;
+}
+
+body.build-mode .repo-card h3 {
+    color: #f5efe6;
+}
+
+body.build-mode .repo-card p {
+    color: #f5efe6;
+}
+
+body.build-mode .repo-card a {
+    color: #f4a261;
+}
+
+body.build-mode .repo-card a:hover {
+    color: #ffbe7a;
+}
+
+body.build-mode .repo-card:hover {
+    border-color: #d97706;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
 /*Scroll Indicator Styling*/
 .scroll-indicator {
     position: absolute;
