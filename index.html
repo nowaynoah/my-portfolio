@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amaan Mawani | Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <h1>Amaan Mawani</h1>
-        <p>Aspiring Web Developer/Cybersecurity Specialist</p>
+    <header class="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle">Aspiring Developer | Cybersecurity Focus</p>
+            <h1 class="hero-title">Amaan Mawani</h1>
+            <button id="modeToggle">Switch to Build Mode</button>
+        </div>
 
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -32,32 +37,102 @@
                 skills, and experience as I continue developing my abilities in
                 programming and web development. I am currently in the process of finishing a two year
                 diploma in Computer Programming with an expected graduation date of May 2027. If you have any
-                questions, please reach out via any of the methods in the "Contact" section. 
+                questions, please reach out via any of the methods in the "Contact" section.
             </p>
+        </section>
+
+        <section id="timeline">
+            <h2>My Journey</h2>
+
+            <div class="timeline-container">
+                <div class="timeline-buttons">
+                    <button class="timeline-btn" data-stage="ubc">University of Toronto</button>
+                    <button class="timeline-btn" data-stage="earls">Earls</button>
+                    <button class="timeline-btn" data-stage="transition">Transition</button>
+                    <button class="timeline-btn" data-stage="humber">Humber</button>
+                    <button class="timeline-btn" data-stage="future">Future</button>
+                </div>
+
+                <div class="timeline-content" id="timelineContent">
+                    <h3>Select a stage</h3>
+                    <p>Click one of the timeline stages to learn more about my academic and professional journey.</p>
+                </div>
+            </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <p>
-                My projects will be added here as I complete more work throughout
-                my programming studies.
-            </p>
+
+             <div class="project-gallery">
+
+                 <article class="project-card">
+                    <h3>Coming Soon</h3>
+                    <button class="project-toggle-btn">Show Details</button>
+                    <div class="project-details">
+                        <p>This project is currently in development.</p>
+                    </div>
+                </article>
+
+                 <article class="project-card">
+                    <h3>Coming Soon</h3>
+                    <button class="project-toggle-btn">Show Details</button>
+                    <div class="project-details">
+                        <p>This project is currently in development.</p>
+                    </div>
+                </article>
+
+                 <article class="project-card">
+                    <h3>Coming Soon</h3>
+                    <button class="project-toggle-btn">Show Details</button>
+                    <div class="project-details">
+                        <p>This project is currently in development.</p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3>Coming Soon</h3>
+                    <button class="project-toggle-btn">Show Details</button>
+                    <div class="project-details">
+                        <p>This project is currently in development.</p>
+                    </div>
+                </article>
+
+            </div>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
 
-            <p>Email:
-                <a href="mailto:amawani10@gmail.com">amawani10@gmail.com</a>
-            </p>
+            <form id="contactForm">
 
-            <p>Phone:
-                <a href="tel:16044049786">604-404-9786</a>
-            </p>
+                <label for="name">Name</label>
+                <input type="text" id="name">
 
-            <p>LinkedIn:
-                <a href="https://www.linkedin.com/in/amaan-m-275587125/" target="_blank">View my LinkedIn profile</a>
-            </p>
+                <label for="email">Email</label>
+                <input type="email" id="email">
+
+                <label for="message">Message</label>
+                <textarea id="message"></textarea>
+
+                <button type="submit">Send Message</button>
+
+                <p id="formError"></p>
+
+            </form>
+
+            <div class="contact-info">
+                <p>Email:
+                    <a href="mailto:amawani10@gmail.com">amawani10@gmail.com</a>
+                </p>
+
+                <p>Phone:
+                    <a href="tel:16044049786">604-404-9786</a>
+                </p>
+
+                <p>LinkedIn:
+                    <a href="https://www.linkedin.com/in/amaan-m-275587125/" target="_blank">View my LinkedIn profile</a>
+                </p>
+            </div>
         </section>
 
     </main>
