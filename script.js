@@ -119,3 +119,54 @@ handleScroll();
 
 // Run on scroll
 window.addEventListener("scroll", handleScroll);
+
+//Typed.js Code/Logic for Hero Title
+const typed = new Typed("#typed-name", {
+    strings: [
+        "Amaan Mawani",
+        "Aspiring Developer",
+        "Cybersecurity Focused",
+    ],
+    typeSpeed: 60,
+    backSpeed: 35,
+    backDelay: 700,
+    smartBackspace: false,
+    loop: false,
+    showCursor: false,
+    onComplete: function () {
+        setTimeout(function () {
+            document.getElementById("typed-name").innerHTML =
+                '<span class="final-name">Amaan Mawani</span>';
+        }, 500);
+    }
+});
+
+// GitHub API Integration for Academic Work Section
+fetch("https://api.github.com/users/nowaynoah/repos")
+    .then(response => response.json())
+    .then(repos => {
+        const repoContainer = document.getElementById("repo-container");
+
+        // Sort repos by most recently updated
+        repos.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+
+        // Take top 4 repos
+        const topRepos = repos.slice(0, 4);
+
+        topRepos.forEach(repo => {
+            const repoCard = document.createElement("div");
+            repoCard.classList.add("repo-card");
+
+            repoCard.innerHTML = `
+                <h3>${repo.name}</h3>
+                <p>${repo.description ? repo.description : "No description provided."}</p>
+                <p><strong>Language:</strong> ${repo.language ? repo.language : "N/A"}</p>
+                <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+            `;
+
+            repoContainer.appendChild(repoCard);
+        });
+    })
+    .catch(error => {
+        console.log("Error fetching repos:", error);
+    });

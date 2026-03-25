@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amaan Mawani | Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -13,8 +14,10 @@
 
     <header class="hero">
         <div class="hero-content">
-            <p class="hero-subtitle">Aspiring Developer | Cybersecurity Focus</p>
-            <h1 class="hero-title">Amaan Mawani</h1>
+            <p class="hero-subtitle">Aspiring Developer | Cybersecurity Focused</p>
+            <h1 class="hero-title">
+                <span id="typed-name"></span>
+            </h1>
             <button id="modeToggle">Switch to Build Mode</button>
         </div>
 
@@ -23,6 +26,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#github-preview">Academic Work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -102,6 +106,13 @@
                 </article>
 
             </div>
+        </section>
+
+        <section id="github-preview">
+            <h2>Academic Work</h2>
+            <p>Check out some of the work I have completed during my academic journey over on GitHub!</p>
+
+            <div id="repo-container"></div>
         </section>
 
         <section id="contact">
