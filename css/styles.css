@@ -139,3 +139,73 @@ a:hover {
     font-size: 1rem;
     line-height: 1;
 }
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 120px 24px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-eyebrow {
+    font-family: "DM Mono", monospace;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1.05;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    min-height: 1.1em;
+}
+
+.hero-tagline {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    max-width: 480px;
+}
+
+.hero-title .final-name {
+    display: inline-block;
+    animation: nameReveal 0.6s ease forwards;
+}
+
+@keyframes nameReveal {
+    from { opacity: 0; transform: translateX(-16px); filter: blur(4px); }
+    to   { opacity: 1; transform: translateX(0);     filter: blur(0);   }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 24px;
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    animation: bounce 1.8s ease-in-out infinite;
+    transition: opacity 0.4s ease;
+}
+
+.scroll-indicator.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(7px); }
+}
