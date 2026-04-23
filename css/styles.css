@@ -547,3 +547,20 @@ body.build-mode #contactForm textarea:focus {
     font-weight: 500;
     color: var(--accent);
 }
+
+/* ===== FOOTER ===== */
+footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.825rem;
+    color: var(--text-muted);
+}
+
+.footer-divider {
+    opacity: 0.4;
+}
