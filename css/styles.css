@@ -437,3 +437,113 @@ section > p {
 .repo-card a:hover {
     color: var(--accent-hover);
 }
+
+/* ===== CONTACT ===== */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 60px;
+    align-items: start;
+    margin-top: 36px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#contactForm label {
+    display: block;
+    font-size: 0.825rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.925rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    color: var(--text-muted);
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(154, 52, 18, 0.08);
+}
+
+body.build-mode #contactForm input:focus,
+body.build-mode #contactForm textarea:focus {
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+}
+
+#contactForm textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.submit-btn {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    background: var(--accent);
+    color: #fff;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.submit-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+#formError {
+    margin-top: 14px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--accent);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 4px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-label {
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.contact-item a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--accent);
+}
